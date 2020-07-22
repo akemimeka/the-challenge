@@ -14,10 +14,43 @@
 	box-sizing: border-box;
 }
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
-em, img, small, strike, strong, b, u, i, center, ol,
-ul, li, form, input, button, article, aside, embed,
-figure, figcaption, footer, header, menu, nav, section {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+img,
+small,
+strike,
+strong,
+b,
+u,
+i,
+center,
+ol,
+ul,
+li,
+form,
+input,
+button,
+article,
+aside,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -28,7 +61,9 @@ a {
 	color: #000;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
 	list-style: none;
 }
 
@@ -98,8 +133,8 @@ nav {
 		align-items: center;
 		justify-content: center;
 
-		padding-top: 1.9rem;
-		padding-bottom: 1.3rem;
+		padding-top: 1.7rem;
+		padding-bottom: 1.1rem;
 
 		letter-spacing: 0.08rem;
 
@@ -109,8 +144,8 @@ nav {
 	}
 
 	.nav-links {
-		width: 100%;
-		max-width: 100%;
+		// width: 100%;
+		// max-width: 100%;
 
 		display: flex;
 		flex-direction: column;
@@ -120,15 +155,14 @@ nav {
 		background-color: $light-gray;
 		text-align: center;
 
-		a {
-			display: flex;
+		a.nav-item {
 			padding: 0.6rem 100vw;
 			color: $dark-gray;
 			font-weight: bold;
 			border-bottom: 1px solid $medium-gray;
 		}
 
-		a:last-child {
+		a.nav-item:last-child {
 			border: none;
 		}
 	}
@@ -136,16 +170,14 @@ nav {
 
 // SECTIONS MIXINS
 @mixin section-base {
-	width: 100%;
-	max-width: 100%;
-	padding: 2.7rem 1.2rem;
+	padding: 2.2rem 1.1rem;
 }
 
 @mixin section-title-base {
 	margin-bottom: 1rem;
 	text-transform: uppercase;
 	text-align: center;
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 @mixin section-text-base {
@@ -159,6 +191,7 @@ nav {
 
 // FORM MIXINS
 @mixin input {
+	max-width: 100%;
 	margin: 1rem 0;
 	padding: 0.5rem 1rem;
 	font-family: $primary-font;
@@ -193,7 +226,7 @@ section.reserve-1 {
 
 	form {
 		text-align: center;
-		
+
 		input {
 			@include input;
 		}
@@ -201,7 +234,7 @@ section.reserve-1 {
 		input::placeholder {
 			color: $dark-gray;
 		}
-		
+
 		button {
 			@include button;
 		}
@@ -238,12 +271,13 @@ section.judges {
 		display: flex;
 		flex-direction: column;
 		margin-bottom: 1.5rem;
-		
-		.judge-img{
+
+		.judge-img {
+			width: 100%;
 			max-width: 100%;
 			height: auto;
 		}
-		
+
 		.judge-name {
 			padding-top: 1rem;
 			padding-bottom: 0.2rem;
@@ -305,7 +339,7 @@ section.reserve-2 {
 
 	form {
 		text-align: center;
-		
+
 		input {
 			@include input;
 			background-color: $lightest-gray;
@@ -314,7 +348,7 @@ section.reserve-2 {
 		input::placeholder {
 			color: $dark-gray;
 		}
-		
+
 		button {
 			@include button;
 		}
@@ -326,8 +360,18 @@ section.reserve-2 {
 	@include section-base;
 	background-color: $dark-gray;
 
-	.section-text {
+	.footer-text {
 		@include section-text-base;
 		color: $white;
+	}
+
+	.icons-container {
+		text-align: center;
+		font-size: 2rem;
+
+		a {
+			color: $white;
+		}
+
 	}
 }

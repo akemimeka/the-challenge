@@ -7,10 +7,43 @@
   box-sizing: border-box;
 }
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
-em, img, small, strike, strong, b, u, i, center, ol,
-ul, li, form, input, button, article, aside, embed,
-figure, figcaption, footer, header, menu, nav, section {
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+em,
+img,
+small,
+strike,
+strong,
+b,
+u,
+i,
+center,
+ol,
+ul,
+li,
+form,
+input,
+button,
+article,
+aside,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -21,7 +54,9 @@ a {
   color: #000;
 }
 
-ol, ul, li {
+ol,
+ul,
+li {
   list-style: none;
 }
 
@@ -49,16 +84,14 @@ nav h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1.9rem;
-  padding-bottom: 1.3rem;
+  padding-top: 1.7rem;
+  padding-bottom: 1.1rem;
   letter-spacing: 0.08rem;
 }
 nav h1 a {
   color: #a61717;
 }
 nav .nav-links {
-  width: 100%;
-  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,21 +99,18 @@ nav .nav-links {
   background-color: #d9d9da;
   text-align: center;
 }
-nav .nav-links a {
-  display: flex;
+nav .nav-links a.nav-item {
   padding: 0.6rem 100vw;
   color: #363d47;
   font-weight: bold;
   border-bottom: 1px solid #9a9da2;
 }
-nav .nav-links a:last-child {
+nav .nav-links a.nav-item:last-child {
   border: none;
 }
 
 section.reserve-1 {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   margin-top: 11rem;
   background-color: #363d47;
 }
@@ -88,7 +118,7 @@ section.reserve-1 .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #9a9da2;
 }
 section.reserve-1 .section-text {
@@ -104,6 +134,7 @@ section.reserve-1 form {
   text-align: center;
 }
 section.reserve-1 form input {
+  max-width: 100%;
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
@@ -123,16 +154,14 @@ section.reserve-1 form button {
 }
 
 section.about {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   background-color: #fff;
 }
 section.about .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #363d47;
 }
 section.about .section-text {
@@ -146,16 +175,14 @@ section.about .section-text {
 }
 
 section.judges {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   background-color: #363d47;
 }
 section.judges .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #9a9da2;
 }
 section.judges .judge-container {
@@ -164,6 +191,7 @@ section.judges .judge-container {
   margin-bottom: 1.5rem;
 }
 section.judges .judge-container .judge-img {
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
@@ -178,16 +206,14 @@ section.judges .judge-container .judge-name {
 }
 
 section.mission {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   background-color: #fff;
 }
 section.mission .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #363d47;
 }
 section.mission .section-text {
@@ -201,16 +227,14 @@ section.mission .section-text {
 }
 
 section.faq {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   background-color: #363d47;
 }
 section.faq .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #9a9da2;
 }
 section.faq .section-text {
@@ -224,16 +248,14 @@ section.faq .section-text {
 }
 
 section.reserve-2 {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   background-color: #fff;
 }
 section.reserve-2 .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #9a9da2;
 }
 section.reserve-2 .section-text {
@@ -249,6 +271,7 @@ section.reserve-2 form {
   text-align: center;
 }
 section.reserve-2 form input {
+  max-width: 100%;
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
@@ -269,18 +292,23 @@ section.reserve-2 form button {
 }
 
 .footer {
-  width: 100%;
-  max-width: 100%;
-  padding: 2.7rem 1.2rem;
+  padding: 2.2rem 1.1rem;
   background-color: #363d47;
 }
-.footer .section-text {
+.footer .footer-text {
   margin-bottom: 0.5rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
   line-height: 1.3rem;
+  color: #fff;
+}
+.footer .icons-container {
+  text-align: center;
+  font-size: 2rem;
+}
+.footer .icons-container a {
   color: #fff;
 }
 
