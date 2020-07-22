@@ -1,19 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Special+Elite&display=swap");
 * {
   box-sizing: border-box;
 }
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
-em, img, small, strike, strong, b, u, i, center,
-ol, ul, li, form, article, aside, embed, figure, figcaption, footer, header, menu, nav, section {
+em, img, small, strike, strong, b, u, i, center, ol,
+ul, li, form, article, aside, embed, figure, figcaption,
+footer, header, menu, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
 }
 
 ol, ul {
   list-style: none;
+}
+
+@font-face {
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  src: url("../src/fonts/LumiosTypewriter-New.eot"), url("path/filename.eot?#iefix") format("embedded-opentype"), url("../src/fonts/LumiosTypewriter-New.woff") format("woff"), url("../src/fonts/LumiosTypewriter-New.woff2") format("woff2"), url("../src/fonts/LumiosTypewriter-New.ttf") format("truetype");
 }
 
 /*# sourceMappingURL=style.css.map */
