@@ -9,8 +9,8 @@
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, a,
 em, img, small, strike, strong, b, u, i, center, ol,
-ul, li, form, article, aside, embed, figure, figcaption,
-footer, header, menu, nav, section {
+ul, li, form, input, button, article, aside, embed,
+figure, figcaption, footer, header, menu, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
@@ -43,55 +43,242 @@ nav {
   justify-content: center;
   background-color: #fff;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  color: #363D47;
+  color: #363d47;
 }
 nav h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 1.5rem;
+  padding-top: 1.9rem;
   padding-bottom: 1.3rem;
   letter-spacing: 0.08rem;
 }
 nav h1 a {
-  color: #A61717;
+  color: #a61717;
 }
-nav #nav-links {
+nav .nav-links {
   width: 100%;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #D9D9DA;
+  background-color: #d9d9da;
   text-align: center;
 }
-nav #nav-links a {
+nav .nav-links a {
   display: flex;
   padding: 0.6rem 100vw;
-  color: #363D47;
+  color: #363d47;
   font-weight: bold;
-  border-bottom: 1px solid #9A9DA2;
+  border-bottom: 1px solid #9a9da2;
 }
-nav #nav-links a:last-child {
+nav .nav-links a:last-child {
   border: none;
 }
 
-section.reserve {
-  width: 100vw;
-  padding: 2.5rem 1.2rem;
+section.reserve-1 {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
   margin-top: 11rem;
-  background-color: #363D47;
+  background-color: #363d47;
 }
-section.reserve .section-title {
+section.reserve-1 .section-title {
+  margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.6rem;
-  color: #9A9DA2;
+  font-size: 2rem;
+  color: #9a9da2;
 }
-section.reserve .section-text {
+section.reserve-1 .section-text {
+  margin-bottom: 0.5rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-size: 0.9rem;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #fff;
+}
+section.reserve-1 form {
+  text-align: center;
+}
+section.reserve-1 form input {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 1.1rem;
+  color: #363d47;
+}
+section.reserve-1 form input::placeholder {
+  color: #363d47;
+}
+section.reserve-1 form button {
+  padding: 0.5rem 1.5rem;
+  background-color: #a61717;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+section.about {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
+  background-color: #fff;
+}
+section.about .section-title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  color: #363d47;
+}
+section.about .section-text {
+  margin-bottom: 0.5rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #363d47;
+}
+
+section.judges {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
+  background-color: #363d47;
+}
+section.judges .section-title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  color: #9a9da2;
+}
+section.judges .judge-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+section.judges .judge-container .judge-img {
+  max-width: 100%;
+  height: auto;
+}
+section.judges .judge-container .judge-name {
+  padding-top: 1rem;
+  padding-bottom: 0.2rem;
+  padding-right: 0.4rem;
+  background-color: #a61717;
+  text-align: right;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  color: #fff;
+}
+
+section.mission {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
+  background-color: #fff;
+}
+section.mission .section-title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  color: #363d47;
+}
+section.mission .section-text {
+  margin-bottom: 0.5rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #363d47;
+}
+
+section.faq {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
+  background-color: #363d47;
+}
+section.faq .section-title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  color: #9a9da2;
+}
+section.faq .section-text {
+  margin-bottom: 0.5rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #fff;
+}
+
+section.reserve-2 {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
+  background-color: #fff;
+}
+section.reserve-2 .section-title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  color: #9a9da2;
+}
+section.reserve-2 .section-text {
+  margin-bottom: 0.5rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #363d47;
+}
+section.reserve-2 form {
+  text-align: center;
+}
+section.reserve-2 form input {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 1.1rem;
+  color: #363d47;
+  background-color: #ebecee;
+}
+section.reserve-2 form input::placeholder {
+  color: #363d47;
+}
+section.reserve-2 form button {
+  padding: 0.5rem 1.5rem;
+  background-color: #a61717;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  max-width: 100%;
+  padding: 2.7rem 1.2rem;
+  background-color: #363d47;
+}
+.footer .section-text {
+  margin-bottom: 0.5rem;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.15rem;
   text-align: center;
   line-height: 1.3rem;
   color: #fff;
