@@ -1,3 +1,16 @@
+// IMPORTS
+@font-face {
+	font-family: "Lumios Typewriter New", "Special Elite", serif;
+	src: url('../src/fonts/LumiosTypewriter-New.eot'),
+		url('path/filename.eot?#iefix') format('embedded-opentype'),
+		url('../src/fonts/LumiosTypewriter-New.woff') format('woff'), 
+		url('../src/fonts/LumiosTypewriter-New.woff2') format('woff2'),
+		url('../src/fonts/LumiosTypewriter-New.ttf') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Special+Elite&display=swap');
+
+// CSS RESET
 * {
   box-sizing: border-box;
 }
@@ -9,28 +22,142 @@ footer, header, menu, nav, section {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	text-decoration: none;
 }
 
-ol, ul {
-  list-style: none;
+a {
+	color: #000;
 }
 
-@font-face {
-	font-family: "Lumios Typewriter New", "Special Elite", serif;
-	src: url('../src/fonts/LumiosTypewriter-New.eot'),
-		url('path/filename.eot?#iefix') format('embedded-opentype'),
-		url('../src/fonts/LumiosTypewriter-New.woff') format('woff'), 
-    url('../src/fonts/LumiosTypewriter-New.woff2') format('woff2'),
-    url('../src/fonts/LumiosTypewriter-New.ttf') format('truetype');
+ol, ul, li {
+	list-style: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Special+Elite&display=swap');
-
+// FONT VARIABLES
 $primary-font: "Lumios Typewriter New", "Special Elite", serif;
 $secondary-font: "Montserrat", sans-serif;
 
+// COLOR VARIABLES
 $red: #A61717;
 $dark-gray: #363D47;
-$light-gray: #9A9DA2;
-$lightest-gray: #D9D9DA;
+$medium-gray: #9A9DA2;
+$light-gray: #D9D9DA;
 $white: #fff;
+
+// DEFAULTS
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: $secondary-font;
+}
+
+// MEDIA QUERIES MIXINS
+// @mixin for-sm-phone-only {
+// 	@media (max-width: 479px) { @content; }
+// }
+@mixin for-phone-portrait-up {
+	@media (min-width: 480px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+	@media (min-width: 640px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+	@media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+	@media (min-width: 1200px) { @content; }
+}
+
+// NAVBAR
+nav {
+	top: 0;
+	position: fixed;
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	background-color: $white;
+	font-family: $primary-font;
+	color: $dark-gray;
+	
+	h1 {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		padding-top: 1.5rem;
+		padding-bottom: 1.3rem;
+
+		letter-spacing: 0.08rem;
+		
+		a {
+			color: $red;
+		}
+	}
+	
+	#nav-links {
+		width: 100%;
+		
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		background-color: $light-gray;
+		text-align: center;
+		
+		a {
+			display: flex;
+			padding: 0.6rem 100vw;
+			color: $dark-gray;
+			font-weight: bold;
+			border-bottom: 1px solid $medium-gray;
+			}
+			
+			a:last-child {
+				border: none;
+			}
+		}
+	}
+	
+	// SECTIONS MIXINS
+	@mixin section-base {
+		width: 100vw;
+		padding: 2.5rem 1.2rem;
+	}
+
+	@mixin section-title-base {
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1.6rem;
+		}
+
+	@mixin section-text-base {
+		font-family: $primary-font;
+		font-size: 0.9rem;
+		letter-spacing: 0.2rem;
+		text-align: center;
+		line-height: 1.3rem;
+		}
+
+	// RESERVE YOUR SPOT SECTION
+	section.reserve {
+		@include section-base;
+		margin-top: 11rem;
+		background-color: $dark-gray;
+
+		.section-title {
+			@include section-title-base;
+			color: $medium-gray;
+		}
+
+		.section-text {
+			@include section-text-base;
+			color: $white;
+		}
+	}

@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Special+Elite&display=swap");
+@font-face {
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  src: url("../src/fonts/LumiosTypewriter-New.eot"), url("path/filename.eot?#iefix") format("embedded-opentype"), url("../src/fonts/LumiosTypewriter-New.woff") format("woff"), url("../src/fonts/LumiosTypewriter-New.woff2") format("woff2"), url("../src/fonts/LumiosTypewriter-New.ttf") format("truetype");
+}
 * {
   box-sizing: border-box;
 }
@@ -10,15 +14,87 @@ footer, header, menu, nav, section {
   margin: 0;
   padding: 0;
   border: 0;
+  text-decoration: none;
 }
 
-ol, ul {
+a {
+  color: #000;
+}
+
+ol, ul, li {
   list-style: none;
 }
 
-@font-face {
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  src: url("../src/fonts/LumiosTypewriter-New.eot"), url("path/filename.eot?#iefix") format("embedded-opentype"), url("../src/fonts/LumiosTypewriter-New.woff") format("woff"), url("../src/fonts/LumiosTypewriter-New.woff2") format("woff2"), url("../src/fonts/LumiosTypewriter-New.ttf") format("truetype");
+  color: #363D47;
+}
+nav h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.3rem;
+  letter-spacing: 0.08rem;
+}
+nav h1 a {
+  color: #A61717;
+}
+nav #nav-links {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #D9D9DA;
+  text-align: center;
+}
+nav #nav-links a {
+  display: flex;
+  padding: 0.6rem 100vw;
+  color: #363D47;
+  font-weight: bold;
+  border-bottom: 1px solid #9A9DA2;
+}
+nav #nav-links a:last-child {
+  border: none;
+}
+
+section.reserve {
+  width: 100vw;
+  padding: 2.5rem 1.2rem;
+  margin-top: 11rem;
+  background-color: #363D47;
+}
+section.reserve .section-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #9A9DA2;
+}
+section.reserve .section-text {
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  line-height: 1.3rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */
