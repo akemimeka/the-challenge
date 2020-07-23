@@ -100,18 +100,23 @@ nav .nav-links {
   text-align: center;
 }
 nav .nav-links a.nav-item {
-  padding: 0.6rem 100vw;
+  border-bottom: 1px solid #9a9da2;
+  padding: 0.6rem 100vw 0.3rem 100vw;
   color: #363d47;
   font-weight: bold;
-  border-bottom: 1px solid #9a9da2;
+  transition: 0.5s;
 }
 nav .nav-links a.nav-item:last-child {
   border: none;
 }
+nav .nav-links a.nav-item:hover {
+  color: #a61717;
+  background-color: #9a9da2;
+}
 
 section.reserve-1 {
-  padding: 2.2rem 1.1rem;
-  margin-top: 11rem;
+  padding: 2rem 1.1rem;
+  margin-top: 10.1rem;
   background-color: #363d47;
 }
 section.reserve-1 .section-title {
@@ -123,11 +128,12 @@ section.reserve-1 .section-title {
 }
 section.reserve-1 .section-text {
   margin-bottom: 0.5rem;
-  font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  line-height: 1.3rem;
+  vertical-align: bottom;
+  line-height: 1.3;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
   color: #fff;
 }
 section.reserve-1 form {
@@ -138,23 +144,28 @@ section.reserve-1 form input {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1rem;
   color: #363d47;
 }
 section.reserve-1 form input::placeholder {
-  color: #363d47;
+  color: #9a9da2;
 }
 section.reserve-1 form button {
   padding: 0.5rem 1.5rem;
   background-color: #a61717;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #fff;
+  transition: 0.5s;
+}
+section.reserve-1 form button:hover {
+  background-color: #fff;
+  color: #a61717;
 }
 
 section.about {
-  padding: 2.2rem 1.1rem;
+  padding: 2rem 1.1rem;
   background-color: #fff;
 }
 section.about .section-title {
@@ -166,16 +177,17 @@ section.about .section-title {
 }
 section.about .section-text {
   margin-bottom: 0.5rem;
-  font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  line-height: 1.3rem;
+  vertical-align: bottom;
+  line-height: 1.3;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
   color: #363d47;
 }
 
 section.judges {
-  padding: 2.2rem 1.1rem;
+  padding: 2rem 1.1rem;
   background-color: #363d47;
 }
 section.judges .section-title {
@@ -204,9 +216,12 @@ section.judges .judge-container .judge-name {
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   color: #fff;
 }
+section.judges .judge-container:last-child {
+  margin-bottom: 0;
+}
 
 section.mission {
-  padding: 2.2rem 1.1rem;
+  padding: 2rem 1.1rem;
   background-color: #fff;
 }
 section.mission .section-title {
@@ -218,16 +233,17 @@ section.mission .section-title {
 }
 section.mission .section-text {
   margin-bottom: 0.5rem;
-  font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  line-height: 1.3rem;
+  vertical-align: bottom;
+  line-height: 1.3;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
   color: #363d47;
 }
 
 section.faq {
-  padding: 2.2rem 1.1rem;
+  padding: 2rem 1.1rem;
   background-color: #363d47;
 }
 section.faq .section-title {
@@ -239,16 +255,30 @@ section.faq .section-title {
 }
 section.faq .section-text {
   margin-bottom: 0.5rem;
-  font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  line-height: 1.3rem;
+  vertical-align: bottom;
+  line-height: 1.3;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
   color: #fff;
+}
+section.faq span.faq-list-style {
+  margin-right: 0.7rem;
+  padding: 0.15rem 0.3rem 0.1rem 0.35rem;
+  background-color: #a61717;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
+  text-justify: none;
+  transition: 0.5s;
+}
+section.faq span.faq-list-style:hover {
+  background-color: #fff;
+  color: #a61717;
 }
 
 section.reserve-2 {
-  padding: 2.2rem 1.1rem;
+  padding: 2rem 1.1rem;
   background-color: #fff;
 }
 section.reserve-2 .section-title {
@@ -260,11 +290,12 @@ section.reserve-2 .section-title {
 }
 section.reserve-2 .section-text {
   margin-bottom: 0.5rem;
-  font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  line-height: 1.3rem;
+  vertical-align: bottom;
+  line-height: 1.3;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
   color: #363d47;
 }
 section.reserve-2 form {
@@ -275,41 +306,53 @@ section.reserve-2 form input {
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1rem;
   color: #363d47;
   background-color: #ebecee;
 }
 section.reserve-2 form input::placeholder {
-  color: #363d47;
+  color: #9a9da2;
 }
 section.reserve-2 form button {
   padding: 0.5rem 1.5rem;
   background-color: #a61717;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #fff;
 }
 
 .footer {
-  padding: 2.2rem 1.1rem;
+  padding: 2rem 1.1rem;
   background-color: #363d47;
 }
 .footer .footer-text {
   margin-bottom: 0.5rem;
-  font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  line-height: 1.3rem;
+  vertical-align: bottom;
+  line-height: 1.3;
+  font-family: "Lumios Typewriter New", "Special Elite", serif;
+  font-size: 0.9rem;
+  margin-bottom: 1.3rem;
+  font-size: 0.8rem;
   color: #fff;
 }
 .footer .icons-container {
-  text-align: center;
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .footer .icons-container a {
+  margin: 0 0.8rem;
+}
+.footer .icons-container a i.fa {
   color: #fff;
+  transition: 0.5s;
+}
+.footer .icons-container a i.fa:hover {
+  color: #a61717;
 }
 
 /*# sourceMappingURL=style.css.map */

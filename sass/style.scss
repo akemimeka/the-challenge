@@ -79,6 +79,58 @@ $light-gray: #d9d9da;
 $lightest-gray: #ebecee;
 $white: #fff;
 
+// MIXINS
+// SECTIONS
+@mixin section-base {
+	padding: 2rem 1.1rem;
+}
+
+@mixin section-title-base {
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+@mixin section-text-base {
+	margin-bottom: 0.5rem;
+	letter-spacing: 0.15rem;
+	text-align: center;
+	vertical-align: bottom;
+	line-height: 1.3;
+	font-family: $primary-font;
+	font-size: 0.9rem;
+}
+
+// FORM
+@mixin input {
+	max-width: 100%;
+	margin: 1rem 0;
+	padding: 0.5rem 1rem;
+	font-family: $primary-font;
+	font-weight: bold;
+	font-size: 1rem;
+	color: $dark-gray;
+}
+
+@mixin button {
+	padding: 0.5rem 1.5rem;
+	background-color: $red;
+	font-family: $primary-font;
+	font-size: 1rem;
+	color: $white;
+}
+
+// HOVERS
+@mixin to-red-hover {
+	color: $red;
+}
+
+@mixin to-white-bg-red-txt-hover {
+	background-color: $white;
+	color: $red;
+}
+
 // DEFAULTS
 html {
 	font-size: 16px;
@@ -90,28 +142,34 @@ body {
 
 // MEDIA QUERIES MIXINS
 // @mixin for-sm-phone-only {
-// 	@media (max-width: 479px) { @content; }
-// }
-// @mixin for-phone-portrait-up {
-// 	@media (min-width: 480px) {
+// 	@media (max-width: 479px) {
 // 		@content;
 // 	}
 // }
-// @mixin for-tablet-portrait-up {
-// 	@media (min-width: 640px) {
-// 		@content;
-// 	}
-// }
-// @mixin for-tablet-landscape-up {
-// 	@media (min-width: 900px) {
-// 		@content;
-// 	}
-// }
-// @mixin for-desktop-up {
-// 	@media (min-width: 1200px) {
-// 		@content;
-// 	}
-// }
+
+@mixin for-phone-portrait-up {
+	@media (min-width: 480px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-portrait-up {
+	@media (min-width: 640px) {
+		@content;
+	}
+}
+
+@mixin for-tablet-landscape-up {
+	@media (min-width: 900px) {
+		@content;
+	}
+}
+
+@mixin for-desktop-up {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
 
 // NAVBAR
 nav {
@@ -156,62 +214,28 @@ nav {
 		text-align: center;
 
 		a.nav-item {
-			padding: 0.6rem 100vw;
+			border-bottom: 1px solid $medium-gray;
+			padding: 0.6rem 100vw 0.3rem 100vw;
 			color: $dark-gray;
 			font-weight: bold;
-			border-bottom: 1px solid $medium-gray;
+			transition: 0.5s;
 		}
 
 		a.nav-item:last-child {
 			border: none;
 		}
+
+		a.nav-item:hover {
+			@include to-red-hover;
+			background-color: $medium-gray;
+		}
 	}
-}
-
-// SECTIONS MIXINS
-@mixin section-base {
-	padding: 2.2rem 1.1rem;
-}
-
-@mixin section-title-base {
-	margin-bottom: 1rem;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 1.8rem;
-}
-
-@mixin section-text-base {
-	margin-bottom: 0.5rem;
-	font-family: $primary-font;
-	font-size: 0.9rem;
-	letter-spacing: 0.15rem;
-	text-align: center;
-	line-height: 1.3rem;
-}
-
-// FORM MIXINS
-@mixin input {
-	max-width: 100%;
-	margin: 1rem 0;
-	padding: 0.5rem 1rem;
-	font-family: $primary-font;
-	font-size: 1.1rem;
-	color: $dark-gray;
-}
-
-@mixin button {
-	padding: 0.5rem 1.5rem;
-	background-color: $red;
-	font-family: $primary-font;
-	font-weight: 400;
-	font-size: 1.1rem;
-	color: $white;
 }
 
 // RESERVE-1 SECTION
 section.reserve-1 {
 	@include section-base;
-	margin-top: 11rem;
+	margin-top: 10.1rem;
 	background-color: $dark-gray;
 
 	.section-title {
@@ -232,11 +256,16 @@ section.reserve-1 {
 		}
 
 		input::placeholder {
-			color: $dark-gray;
+			color: $medium-gray;
 		}
 
 		button {
 			@include button;
+			transition: 0.5s;
+		}
+
+		button:hover {
+			@include to-white-bg-red-txt-hover;
 		}
 	}
 }
@@ -288,6 +317,10 @@ section.judges {
 			color: $white;
 		}
 	}
+
+	.judge-container:last-child {
+		margin-bottom: 0;
+	}
 }
 
 // OUR MISSION SECTION
@@ -320,6 +353,20 @@ section.faq {
 		@include section-text-base;
 		color: $white;
 	}
+
+	span.faq-list-style {
+		margin-right: 0.7rem;
+		padding: 0.15rem 0.3rem 0.1rem 0.35rem;
+		background-color: $red;
+		font-family: $secondary-font;
+		text-align: justify;
+		text-justify: none;
+		transition: 0.5s;
+	}
+
+	span.faq-list-style:hover {
+		@include to-white-bg-red-txt-hover;
+	}
 }
 
 // RESERVE YOUR SPOT SECTION
@@ -346,7 +393,7 @@ section.reserve-2 {
 		}
 
 		input::placeholder {
-			color: $dark-gray;
+			color: $medium-gray;
 		}
 
 		button {
@@ -362,16 +409,28 @@ section.reserve-2 {
 
 	.footer-text {
 		@include section-text-base;
+		margin-bottom: 1.3rem;
+		font-size: 0.8rem;
 		color: $white;
 	}
 
 	.icons-container {
-		text-align: center;
 		font-size: 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
 		a {
-			color: $white;
-		}
+			margin: 0 0.8rem;
 
+			i.fa {
+				color: $white;
+				transition: 0.5s;
+			}
+
+			i.fa:hover {
+				@include to-red-hover;
+			}
+		}
 	}
 }
