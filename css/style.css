@@ -121,15 +121,15 @@ body {
 .nav-link-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
   text-align: center;
 }
 @media (min-width: 640px) {
   .nav-link-container {
-    max-width: 55%;
+    width: 100%;
+    max-width: 45%;
     flex-direction: row;
     justify-content: space-between;
+    text-align: right;
   }
 }
 
@@ -151,7 +151,7 @@ body {
 @media (min-width: 640px) {
   .nav-link {
     border: 0;
-    padding: 0.2rem 1rem 0 1rem;
+    padding: 0.2rem 0 0 0;
     background-color: #fff;
     font-size: 0.9rem;
   }
@@ -188,7 +188,7 @@ section.reserve-1 {
 }
 @media (min-width: 640px) {
   section.reserve-1 {
-    margin-top: 2rem;
+    margin-top: 4.5rem;
   }
 }
 section.reserve-1 .section-title {
