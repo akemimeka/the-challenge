@@ -5,6 +5,7 @@
 }
 * {
   box-sizing: border-box;
+  transition: 0.3s;
 }
 
 html,
@@ -63,6 +64,11 @@ li {
 html {
   font-size: 16px;
 }
+@media (min-width: 480px) {
+  html {
+    font-size: 18px;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -88,6 +94,12 @@ nav h1 {
   padding-bottom: 1.1rem;
   letter-spacing: 0.08rem;
 }
+@media (min-width: 480px) {
+  nav h1 {
+    padding-top: 1.9rem;
+    padding-bottom: 1.3rem;
+  }
+}
 nav h1 a {
   color: #a61717;
 }
@@ -106,6 +118,11 @@ nav .nav-links a.nav-item {
   font-weight: bold;
   transition: 0.5s;
 }
+@media (min-width: 480px) {
+  nav .nav-links a.nav-item {
+    padding: 0.8rem 100vw 0.5rem 100vw;
+  }
+}
 nav .nav-links a.nav-item:last-child {
   border: none;
 }
@@ -119,12 +136,27 @@ section.reserve-1 {
   margin-top: 10.1rem;
   background-color: #363d47;
 }
+@media (min-width: 480px) {
+  section.reserve-1 {
+    padding: 2.3rem;
+  }
+}
+@media (min-width: 480px) {
+  section.reserve-1 {
+    margin-top: 11.7rem;
+  }
+}
 section.reserve-1 .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
   color: #9a9da2;
+}
+@media (min-width: 480px) {
+  section.reserve-1 .section-title {
+    margin-bottom: 1.3rem;
+  }
 }
 section.reserve-1 .section-text {
   margin-bottom: 0.5rem;
@@ -136,23 +168,34 @@ section.reserve-1 .section-text {
   font-size: 0.9rem;
   color: #fff;
 }
+@media (min-width: 480px) {
+  section.reserve-1 .section-text {
+    font-size: 0.8rem;
+  }
+}
 section.reserve-1 form {
   text-align: center;
 }
 section.reserve-1 form input {
+  width: 100%;
   max-width: 100%;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
+  margin: 1rem 0.6rem 1rem 0;
+  padding: 0.5rem 1rem 0.3rem 0.9rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-weight: bold;
   font-size: 1rem;
   color: #363d47;
 }
+@media (min-width: 640px) {
+  section.reserve-1 form input {
+    max-width: 50vw;
+  }
+}
 section.reserve-1 form input::placeholder {
   color: #9a9da2;
 }
 section.reserve-1 form button {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 0.3rem 1.6rem;
   background-color: #a61717;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-size: 1rem;
@@ -168,12 +211,22 @@ section.about {
   padding: 2rem 1.1rem;
   background-color: #fff;
 }
+@media (min-width: 480px) {
+  section.about {
+    padding: 2.3rem;
+  }
+}
 section.about .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
   color: #363d47;
+}
+@media (min-width: 480px) {
+  section.about .section-title {
+    margin-bottom: 1.3rem;
+  }
 }
 section.about .section-text {
   margin-bottom: 0.5rem;
@@ -185,10 +238,20 @@ section.about .section-text {
   font-size: 0.9rem;
   color: #363d47;
 }
+@media (min-width: 480px) {
+  section.about .section-text {
+    font-size: 0.8rem;
+  }
+}
 
 section.judges {
   padding: 2rem 1.1rem;
   background-color: #363d47;
+}
+@media (min-width: 480px) {
+  section.judges {
+    padding: 2.3rem;
+  }
 }
 section.judges .section-title {
   margin-bottom: 1rem;
@@ -197,15 +260,31 @@ section.judges .section-title {
   font-size: 1.8rem;
   color: #9a9da2;
 }
+@media (min-width: 480px) {
+  section.judges .section-title {
+    margin-bottom: 1.3rem;
+  }
+}
 section.judges .judge-container {
   display: flex;
   flex-direction: column;
   margin-bottom: 1.5rem;
 }
+@media (min-width: 480px) {
+  section.judges .judge-container {
+    max-width: 60vw;
+  }
+}
 section.judges .judge-container .judge-img {
   width: 100%;
   max-width: 100%;
   height: auto;
+}
+@media (min-width: 480px) {
+  section.judges .judge-container .judge-img {
+    max-width: 60vw;
+    margin: 0 auto;
+  }
 }
 section.judges .judge-container .judge-name {
   padding-top: 1rem;
@@ -214,7 +293,13 @@ section.judges .judge-container .judge-name {
   background-color: #a61717;
   text-align: right;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
+  letter-spacing: 0.1rem;
   color: #fff;
+}
+@media (min-width: 480px) {
+  section.judges .judge-container .judge-name {
+    max-width: 60vw;
+  }
 }
 section.judges .judge-container:last-child {
   margin-bottom: 0;
@@ -224,12 +309,22 @@ section.mission {
   padding: 2rem 1.1rem;
   background-color: #fff;
 }
+@media (min-width: 480px) {
+  section.mission {
+    padding: 2.3rem;
+  }
+}
 section.mission .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
   color: #363d47;
+}
+@media (min-width: 480px) {
+  section.mission .section-title {
+    margin-bottom: 1.3rem;
+  }
 }
 section.mission .section-text {
   margin-bottom: 0.5rem;
@@ -241,10 +336,20 @@ section.mission .section-text {
   font-size: 0.9rem;
   color: #363d47;
 }
+@media (min-width: 480px) {
+  section.mission .section-text {
+    font-size: 0.8rem;
+  }
+}
 
 section.faq {
   padding: 2rem 1.1rem;
   background-color: #363d47;
+}
+@media (min-width: 480px) {
+  section.faq {
+    padding: 2.3rem;
+  }
 }
 section.faq .section-title {
   margin-bottom: 1rem;
@@ -252,6 +357,11 @@ section.faq .section-title {
   text-align: center;
   font-size: 1.8rem;
   color: #9a9da2;
+}
+@media (min-width: 480px) {
+  section.faq .section-title {
+    margin-bottom: 1.3rem;
+  }
 }
 section.faq .section-text {
   margin-bottom: 0.5rem;
@@ -263,14 +373,22 @@ section.faq .section-text {
   font-size: 0.9rem;
   color: #fff;
 }
+@media (min-width: 480px) {
+  section.faq .section-text {
+    font-size: 0.8rem;
+  }
+}
 section.faq span.faq-list-style {
   margin-right: 0.7rem;
-  padding: 0.15rem 0.3rem 0.1rem 0.35rem;
+  padding: 0.15rem 0.3rem 0.1rem 0.45rem;
   background-color: #a61717;
   font-family: "Montserrat", sans-serif;
-  text-align: justify;
-  text-justify: none;
   transition: 0.5s;
+}
+@media (min-width: 480px) {
+  section.faq span.faq-list-style {
+    font-size: 1rem;
+  }
 }
 section.faq span.faq-list-style:hover {
   background-color: #fff;
@@ -281,12 +399,22 @@ section.reserve-2 {
   padding: 2rem 1.1rem;
   background-color: #fff;
 }
+@media (min-width: 480px) {
+  section.reserve-2 {
+    padding: 2.3rem;
+  }
+}
 section.reserve-2 .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
   color: #9a9da2;
+}
+@media (min-width: 480px) {
+  section.reserve-2 .section-title {
+    margin-bottom: 1.3rem;
+  }
 }
 section.reserve-2 .section-text {
   margin-bottom: 0.5rem;
@@ -298,24 +426,35 @@ section.reserve-2 .section-text {
   font-size: 0.9rem;
   color: #363d47;
 }
+@media (min-width: 480px) {
+  section.reserve-2 .section-text {
+    font-size: 0.8rem;
+  }
+}
 section.reserve-2 form {
   text-align: center;
 }
 section.reserve-2 form input {
+  width: 100%;
   max-width: 100%;
-  margin: 1rem 0;
-  padding: 0.5rem 1rem;
+  margin: 1rem 0.6rem 1rem 0;
+  padding: 0.5rem 1rem 0.3rem 0.9rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-weight: bold;
   font-size: 1rem;
   color: #363d47;
   background-color: #ebecee;
 }
+@media (min-width: 640px) {
+  section.reserve-2 form input {
+    max-width: 50vw;
+  }
+}
 section.reserve-2 form input::placeholder {
   color: #9a9da2;
 }
 section.reserve-2 form button {
-  padding: 0.5rem 1.5rem;
+  padding: 0.5rem 1.5rem 0.3rem 1.6rem;
   background-color: #a61717;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-size: 1rem;
@@ -325,6 +464,11 @@ section.reserve-2 form button {
 .footer {
   padding: 2rem 1.1rem;
   background-color: #363d47;
+}
+@media (min-width: 480px) {
+  .footer {
+    padding: 2.3rem;
+  }
 }
 .footer .footer-text {
   margin-bottom: 0.5rem;
@@ -338,11 +482,26 @@ section.reserve-2 form button {
   font-size: 0.8rem;
   color: #fff;
 }
+@media (min-width: 480px) {
+  .footer .footer-text {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 480px) {
+  .footer .footer-text {
+    font-size: 0.65rem;
+  }
+}
 .footer .icons-container {
   font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 480px) {
+  .footer .icons-container {
+    font-size: 1.8rem;
+  }
 }
 .footer .icons-container a {
   margin: 0 0.8rem;
