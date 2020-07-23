@@ -351,24 +351,29 @@ section.judges {
 	.judge-container {
 		display: flex;
 		flex-direction: column;
+		align-items: center;
 		margin-bottom: 1.5rem;
 
 		@media (min-width: $for-phone-portrait-up) {
-			max-width: 60vw;
 		}
 
 		.judge-img {
+			display: block;
 			width: 100%;
-			max-width: 100%;
+			min-width: 100px;
+			max-width: 350px;
 			height: auto;
-
+			
 			@media (min-width: $for-phone-portrait-up) {
-				max-width: 60vw;
-				margin: 0 auto;
 			}
 		}
 
 		.judge-name {
+			display: block;
+			width: 100%;
+			min-width: 100px;
+			max-width: 350px;
+			height: auto;
 			padding-top: 1rem;
 			padding-bottom: 0.2rem;
 			padding-right: 0.4rem;
@@ -379,7 +384,6 @@ section.judges {
 			color: $white;
 
 			@media (min-width: $for-phone-portrait-up) {
-				max-width: 60vw;
 			}
 		}
 	}
