@@ -74,7 +74,7 @@ li {
 }
 
 // FONT VARIABLES
-$primary-font: "Lumios Typewriter New", serif;
+$primary-font: "Lumios Typewriter New", Courier, monospace;
 $secondary-font: "Montserrat", sans-serif;
 
 // COLOR VARIABLES
@@ -135,7 +135,7 @@ $for-desktop-up: 1200px;
 
 @mixin section-text-base {
 	margin-bottom: 0.5rem;
-	letter-spacing: 0.15rem;
+	letter-spacing: 0.1rem;
 	text-align: center;
 	line-height: 1.3;
 	font-family: $primary-font;
@@ -159,8 +159,8 @@ $for-desktop-up: 1200px;
 @mixin input {
 	width: 100%;
 	max-width: 100%;
-	margin: 1rem 0.6rem 1rem 0;
-	padding: 0.5rem 1rem 0.3rem 0.9rem;
+	margin: 1rem 0.8rem 0 0;
+	padding: 0.5rem 1rem;
 	font-family: $primary-font;
 	font-weight: bold;
 	font-size: 0.8rem;
@@ -181,7 +181,7 @@ $for-desktop-up: 1200px;
 }
 
 @mixin button {
-	padding: 0.5rem 1.5rem 0.3rem 1.6rem;
+	padding: 0.5rem 1.5rem;
 	background-color: $red;
 	font-family: $primary-font;
 	font-size: 0.9rem;
@@ -189,7 +189,7 @@ $for-desktop-up: 1200px;
 	color: $white;
 
 	@media (min-width: $for-tablet-portrait-up) {
-		padding: 0.5rem 1.1rem 0.3rem 1.2rem;
+		padding: 0.5rem 1.1rem;
 		font-size: 0.8rem;
 	}
 }
@@ -656,11 +656,6 @@ section.reserve-2 {
 			@media (min-width: $for-phone-portrait-up) {
 				display: inline;
 			}
-		}
-
-		span {
-			font-family: $secondary-font;
-			font-size: 1rem;
 		}
 	}
 
