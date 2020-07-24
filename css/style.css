@@ -45,6 +45,10 @@ header,
 menu,
 nav,
 section {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   margin: 0;
   padding: 0;
   border: 0;
@@ -69,6 +73,11 @@ html {
     font-size: 18px;
   }
 }
+@media (min-width: 640px) {
+  html {
+    font-size: 19px;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -91,6 +100,11 @@ body {
     padding: 1.7rem 2rem;
   }
 }
+@media (min-width: 900px) {
+  .nav-container {
+    padding: 2.6rem 2.6rem;
+  }
+}
 
 .nav-title {
   padding-top: 1.7rem;
@@ -110,7 +124,12 @@ body {
     width: 40%;
     padding: 0;
     text-align: left;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 900px) {
+  .nav-title {
+    width: 70%;
   }
 }
 
@@ -181,6 +200,11 @@ section.reserve-1 {
     padding: 2.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.reserve-1 {
+    padding: 2.6rem 4rem;
+  }
+}
 @media (min-width: 480px) {
   section.reserve-1 {
     margin-top: 11.7rem;
@@ -196,6 +220,7 @@ section.reserve-1 .section-title {
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 2rem;
   color: #9a9da2;
 }
 @media (min-width: 480px) {
@@ -203,14 +228,22 @@ section.reserve-1 .section-title {
     margin-bottom: 1.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.reserve-1 .section-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
+section.reserve-1 .text-container p:last-child {
+  margin-bottom: 0;
+}
 section.reserve-1 .section-text {
   margin-bottom: 0.5rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  vertical-align: bottom;
   line-height: 1.3;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #fff;
 }
 @media (min-width: 480px) {
@@ -228,7 +261,8 @@ section.reserve-1 form input {
   padding: 0.5rem 1rem 0.3rem 0.9rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
   color: #363d47;
 }
 @media (min-width: 640px) {
@@ -243,8 +277,15 @@ section.reserve-1 form button {
   padding: 0.5rem 1.5rem 0.3rem 1.6rem;
   background-color: #a61717;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
   color: #fff;
+}
+@media (min-width: 640px) {
+  section.reserve-1 form button {
+    padding: 0.5rem 1.1rem 0.3rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 section.reserve-1 form button:hover {
   background-color: #fff;
@@ -260,11 +301,17 @@ section.about {
     padding: 2.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.about {
+    padding: 2.6rem 4rem;
+  }
+}
 section.about .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 2rem;
   color: #363d47;
 }
 @media (min-width: 480px) {
@@ -272,14 +319,22 @@ section.about .section-title {
     margin-bottom: 1.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.about .section-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
+section.about .text-container p:last-child {
+  margin-bottom: 0;
+}
 section.about .section-text {
   margin-bottom: 0.5rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  vertical-align: bottom;
   line-height: 1.3;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #363d47;
 }
 @media (min-width: 480px) {
@@ -297,11 +352,22 @@ section.judges {
     padding: 2.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.judges {
+    padding: 2.6rem 4rem;
+  }
+}
+@media (min-width: 640px) {
+  section.judges {
+    padding: 2.9rem 4rem;
+  }
+}
 section.judges .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 2rem;
   color: #9a9da2;
 }
 @media (min-width: 480px) {
@@ -309,11 +375,30 @@ section.judges .section-title {
     margin-bottom: 1.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.judges .section-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
+@media (min-width: 640px) {
+  section.judges .section-title {
+    margin-bottom: 2rem;
+  }
+}
+section.judges .judge-container:last-child {
+  margin-bottom: 0;
+}
 section.judges .judge-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 640px) {
+  section.judges .judge-container {
+    margin-bottom: 2rem;
+  }
 }
 section.judges .judge-container .judge-img {
   display: block;
@@ -322,23 +407,36 @@ section.judges .judge-container .judge-img {
   max-width: 350px;
   height: auto;
 }
+@media (min-width: 640px) {
+  section.judges .judge-container .judge-img {
+    max-width: 300px;
+  }
+}
 section.judges .judge-container .judge-name {
   display: block;
   width: 100%;
   min-width: 100px;
   max-width: 350px;
   height: auto;
-  padding-top: 1rem;
-  padding-bottom: 0.2rem;
-  padding-right: 0.4rem;
+  padding: 1rem 0.4rem 0.2rem 0;
   background-color: #a61717;
   text-align: right;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   letter-spacing: 0.1rem;
   color: #fff;
 }
-section.judges .judge-container:last-child {
-  margin-bottom: 0;
+@media (min-width: 480px) {
+  section.judges .judge-container .judge-name {
+    padding: 1.4rem 0.4rem 0.3rem 0;
+    font-size: 0.95rem;
+  }
+}
+@media (min-width: 640px) {
+  section.judges .judge-container .judge-name {
+    max-width: 300px;
+    padding: 1.1rem 0.4rem 0.3rem 0;
+    font-size: 0.9rem;
+  }
 }
 
 section.mission {
@@ -350,11 +448,17 @@ section.mission {
     padding: 2.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.mission {
+    padding: 2.6rem 4rem;
+  }
+}
 section.mission .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 2rem;
   color: #363d47;
 }
 @media (min-width: 480px) {
@@ -362,14 +466,22 @@ section.mission .section-title {
     margin-bottom: 1.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.mission .section-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
+section.mission .text-container p:last-child {
+  margin-bottom: 0;
+}
 section.mission .section-text {
   margin-bottom: 0.5rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  vertical-align: bottom;
   line-height: 1.3;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #363d47;
 }
 @media (min-width: 480px) {
@@ -387,11 +499,17 @@ section.faq {
     padding: 2.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.faq {
+    padding: 2.6rem 4rem;
+  }
+}
 section.faq .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 2rem;
   color: #9a9da2;
 }
 @media (min-width: 480px) {
@@ -399,14 +517,19 @@ section.faq .section-title {
     margin-bottom: 1.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.faq .section-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
 section.faq .section-text {
   margin-bottom: 0.5rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  vertical-align: bottom;
   line-height: 1.3;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #fff;
 }
 @media (min-width: 480px) {
@@ -414,18 +537,22 @@ section.faq .section-text {
     font-size: 0.8rem;
   }
 }
-section.faq span.faq-list-style {
+section.faq .text-container li:last-child {
+  margin-bottom: 0;
+}
+section.faq button.faq-list-style {
   margin-right: 0.7rem;
-  padding: 0.15rem 0.3rem 0.1rem 0.45rem;
+  padding: 0.15rem 0.4rem;
   background-color: #a61717;
   font-family: "Montserrat", sans-serif;
+  color: #fff;
 }
 @media (min-width: 480px) {
-  section.faq span.faq-list-style {
+  section.faq button.faq-list-style {
     font-size: 1rem;
   }
 }
-section.faq span.faq-list-style:hover {
+section.faq button.faq-list-style:hover {
   background-color: #fff;
   color: #a61717;
 }
@@ -439,11 +566,17 @@ section.reserve-2 {
     padding: 2.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.reserve-2 {
+    padding: 2.6rem 4rem;
+  }
+}
 section.reserve-2 .section-title {
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.8rem;
+  line-height: 2rem;
   color: #9a9da2;
 }
 @media (min-width: 480px) {
@@ -451,20 +584,28 @@ section.reserve-2 .section-title {
     margin-bottom: 1.3rem;
   }
 }
+@media (min-width: 640px) {
+  section.reserve-2 .section-title {
+    font-size: 2rem;
+    line-height: 2.3rem;
+  }
+}
 section.reserve-2 .section-text {
   margin-bottom: 0.5rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  vertical-align: bottom;
   line-height: 1.3;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #363d47;
 }
 @media (min-width: 480px) {
   section.reserve-2 .section-text {
     font-size: 0.8rem;
   }
+}
+section.reserve-2 .text-container p:last-child {
+  margin-bottom: 0;
 }
 section.reserve-2 form {
   text-align: center;
@@ -476,7 +617,8 @@ section.reserve-2 form input {
   padding: 0.5rem 1rem 0.3rem 0.9rem;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
   color: #363d47;
   background-color: #ebecee;
 }
@@ -492,8 +634,15 @@ section.reserve-2 form button {
   padding: 0.5rem 1.5rem 0.3rem 1.6rem;
   background-color: #a61717;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
   color: #fff;
+}
+@media (min-width: 640px) {
+  section.reserve-2 form button {
+    padding: 0.5rem 1.1rem 0.3rem 1.2rem;
+    font-size: 0.8rem;
+  }
 }
 
 .footer {
@@ -502,17 +651,21 @@ section.reserve-2 form button {
 }
 @media (min-width: 480px) {
   .footer {
-    padding: 2.3rem;
+    padding: 1.6rem 1.1rem 1.3rem 1.1rem;
+  }
+}
+@media (min-width: 640px) {
+  .footer {
+    padding: 2rem 1.1rem 1.7rem 1.1rem;
   }
 }
 .footer .footer-text {
   margin-bottom: 0.5rem;
   letter-spacing: 0.15rem;
   text-align: center;
-  vertical-align: bottom;
   line-height: 1.3;
   font-family: "Lumios Typewriter New", "Special Elite", serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin-bottom: 1.3rem;
   font-size: 0.8rem;
   color: #fff;
@@ -524,17 +677,36 @@ section.reserve-2 form button {
 }
 @media (min-width: 480px) {
   .footer .footer-text {
+    margin-bottom: 0.5rem;
     font-size: 0.65rem;
   }
 }
+@media (min-width: 640px) {
+  .footer .footer-text {
+    margin-bottom: 0.5rem;
+  }
+}
+.footer .footer-text br {
+  display: none;
+}
+@media (min-width: 480px) {
+  .footer .footer-text br {
+    display: inline;
+  }
+}
+.footer .footer-text span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
 .footer .icons-container {
-  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 2rem;
 }
 @media (min-width: 480px) {
   .footer .icons-container {
+    margin-top: 1.3rem;
     font-size: 1.8rem;
   }
 }

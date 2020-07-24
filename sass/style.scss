@@ -52,6 +52,10 @@ header,
 menu,
 nav,
 section {
+	margin-block-start: 0;
+	margin-block-end: 0;
+	margin-inline-start: 0;
+	margin-inline-end: 0;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -86,22 +90,12 @@ $for-tablet-portrait-up: 640px;
 $for-tablet-landscape-up: 900px;
 $for-desktop-up: 1200px;
 
-// @mixin for-sm-phone-only {
-// 	@media (max-width: 479px) {
-// 		@content;
-// 	}
-// }
-
-@media (min-width: $for-phone-portrait-up) {
-}
-
-@media (min-width: $for-tablet-portrait-up) {
-}
-
 @media (min-width: $for-tablet-landscape-up) {
+
 }
 
 @media (min-width: $for-desktop-up) {
+
 }
 
 // MIXINS
@@ -112,6 +106,10 @@ $for-desktop-up: 1200px;
 	@media (min-width: $for-phone-portrait-up) {
 		padding: 2.3rem;
 	}
+
+	@media (min-width: $for-tablet-portrait-up) {
+		padding: 2.6rem 4rem;
+	}
 }
 
 @mixin section-title-base {
@@ -119,9 +117,15 @@ $for-desktop-up: 1200px;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.8rem;
+	line-height: 2rem;
 
 	@media (min-width: $for-phone-portrait-up) {
 		margin-bottom: 1.3rem;
+	}
+
+	@media (min-width: $for-tablet-portrait-up) {
+		font-size: 2rem;
+		line-height: 2.3rem;
 	}
 }
 
@@ -129,10 +133,9 @@ $for-desktop-up: 1200px;
 	margin-bottom: 0.5rem;
 	letter-spacing: 0.15rem;
 	text-align: center;
-	vertical-align: bottom;
 	line-height: 1.3;
 	font-family: $primary-font;
-	font-size: 0.9rem;
+	font-size: 0.8rem;
 
 	@media (min-width: $for-phone-portrait-up) {
 		font-size: 0.8rem;
@@ -147,7 +150,8 @@ $for-desktop-up: 1200px;
 	padding: 0.5rem 1rem 0.3rem 0.9rem;
 	font-family: $primary-font;
 	font-weight: bold;
-	font-size: 1rem;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
 	color: $dark-gray;
 
 	@media (min-width: $for-tablet-portrait-up) {
@@ -159,8 +163,14 @@ $for-desktop-up: 1200px;
 	padding: 0.5rem 1.5rem 0.3rem 1.6rem;
 	background-color: $red;
 	font-family: $primary-font;
-	font-size: 1rem;
+	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
 	color: $white;
+
+	@media (min-width: $for-tablet-portrait-up) {
+		padding: 0.5rem 1.1rem 0.3rem 1.2rem;
+		font-size: 0.8rem;
+	}
 }
 
 // HOVERS
@@ -179,6 +189,10 @@ html {
 
 	@media (min-width: $for-phone-portrait-up) {
 		font-size: 18px;
+	}
+
+	@media (min-width: $for-tablet-portrait-up) {
+		font-size: 19px;
 	}
 }
 
@@ -202,6 +216,10 @@ body {
 		justify-content: space-between;
 		padding: 1.7rem 2rem;
 	}
+
+	@media (min-width: $for-tablet-landscape-up) {
+		padding: 2.6rem 2.6rem;
+	}
 }
 
 .nav-title {
@@ -220,7 +238,11 @@ body {
 		width: 40%;
 		padding: 0;
 		text-align: left;
-		font-size: 1.1rem;
+		font-size: 1.2rem;
+	}
+
+	@media (min-width: $for-tablet-landscape-up) {
+		width: 70%;
 	}
 }
 
@@ -296,6 +318,10 @@ section.reserve-1 {
 		color: $medium-gray;
 	}
 
+	.text-container p:last-child {
+		margin-bottom: 0;
+	}
+
 	.section-text {
 		@include section-text-base;
 		color: $white;
@@ -332,6 +358,10 @@ section.about {
 		color: $dark-gray;
 	}
 
+	.text-container p:last-child {
+		margin-bottom: 0;
+	}
+
 	.section-text {
 		@include section-text-base;
 		color: $dark-gray;
@@ -343,9 +373,21 @@ section.judges {
 	@include section-base;
 	background-color: $dark-gray;
 
+	@media (min-width: $for-tablet-portrait-up) {
+		padding: 2.9rem 4rem;
+	}
+
 	.section-title {
 		@include section-title-base;
 		color: $medium-gray;
+
+		@media (min-width: $for-tablet-portrait-up) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	.judge-container:last-child {
+		margin-bottom: 0;
 	}
 
 	.judge-container {
@@ -354,7 +396,8 @@ section.judges {
 		align-items: center;
 		margin-bottom: 1.5rem;
 
-		@media (min-width: $for-phone-portrait-up) {
+		@media (min-width: $for-tablet-portrait-up) {
+			margin-bottom: 2rem;
 		}
 
 		.judge-img {
@@ -363,8 +406,9 @@ section.judges {
 			min-width: 100px;
 			max-width: 350px;
 			height: auto;
-			
-			@media (min-width: $for-phone-portrait-up) {
+
+			@media (min-width: $for-tablet-portrait-up) {
+				max-width: 300px;
 			}
 		}
 
@@ -374,9 +418,8 @@ section.judges {
 			min-width: 100px;
 			max-width: 350px;
 			height: auto;
-			padding-top: 1rem;
-			padding-bottom: 0.2rem;
-			padding-right: 0.4rem;
+			padding: 1rem 0.4rem 0.2rem 0;
+
 			background-color: $red;
 			text-align: right;
 			font-family: $primary-font;
@@ -384,12 +427,16 @@ section.judges {
 			color: $white;
 
 			@media (min-width: $for-phone-portrait-up) {
+				padding: 1.4rem 0.4rem 0.3rem 0;
+				font-size: 0.95rem;
+			}
+
+			@media (min-width: $for-tablet-portrait-up) {
+				max-width: 300px;
+				padding: 1.1rem 0.4rem 0.3rem 0;
+				font-size: 0.9rem;
 			}
 		}
-	}
-
-	.judge-container:last-child {
-		margin-bottom: 0;
 	}
 }
 
@@ -401,6 +448,10 @@ section.mission {
 	.section-title {
 		@include section-title-base;
 		color: $dark-gray;
+	}
+
+	.text-container p:last-child {
+		margin-bottom: 0;
 	}
 
 	.section-text {
@@ -424,23 +475,28 @@ section.faq {
 		color: $white;
 	}
 
-	span.faq-list-style {
+	.text-container li:last-child {
+		margin-bottom: 0;
+	}
+
+	button.faq-list-style {
 		margin-right: 0.7rem;
-		padding: 0.15rem 0.3rem 0.1rem 0.45rem;
+		padding: 0.15rem 0.4rem;
 		background-color: $red;
 		font-family: $secondary-font;
+		color: $white;
 
 		@media (min-width: $for-phone-portrait-up) {
 			font-size: 1rem;
 		}
 	}
 
-	span.faq-list-style:hover {
+	button.faq-list-style:hover {
 		@include to-white-bg-red-txt-hover;
 	}
 }
 
-// RESERVE YOUR SPOT SECTION
+// RESERVE-2 SECTION
 section.reserve-2 {
 	@include section-base;
 	background-color: $white;
@@ -453,6 +509,10 @@ section.reserve-2 {
 	.section-text {
 		@include section-text-base;
 		color: $dark-gray;
+	}
+
+	.text-container p:last-child {
+		margin-bottom: 0;
 	}
 
 	form {
@@ -475,8 +535,16 @@ section.reserve-2 {
 
 // FOOTER
 .footer {
-	@include section-base;
+	padding: 2rem 1.1rem;
 	background-color: $dark-gray;
+
+	@media (min-width: $for-phone-portrait-up) {
+		padding: 1.6rem 1.1rem 1.3rem 1.1rem;
+	}
+
+	@media (min-width: $for-tablet-portrait-up) {
+		padding: 2rem 1.1rem 1.7rem 1.1rem;
+	}
 
 	.footer-text {
 		@include section-text-base;
@@ -485,17 +553,35 @@ section.reserve-2 {
 		color: $white;
 
 		@media (min-width: $for-phone-portrait-up) {
+			margin-bottom: 0.5rem;
 			font-size: 0.65rem;
+		}
+
+		@media (min-width: $for-tablet-portrait-up) {
+			margin-bottom: 0.5rem;
+		}
+
+		br {
+			display: none;
+			@media (min-width: $for-phone-portrait-up) {
+				display: inline;
+			}
+		}
+
+		span {
+			font-family: $secondary-font;
+			font-size: 1rem;
 		}
 	}
 
 	.icons-container {
-		font-size: 2rem;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		font-size: 2rem;
 
 		@media (min-width: $for-phone-portrait-up) {
+			margin-top: 1.3rem;
 			font-size: 1.8rem;
 		}
 
