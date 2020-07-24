@@ -1,13 +1,14 @@
 // IMPORTS
 @font-face {
-	font-family: "Lumios Typewriter New", "Special Elite", serif;
-	src: url("../src/fonts/LumiosTypewriter-New.eot"), url("path/filename.eot?#iefix") format("embedded-opentype"),
-		url("../src/fonts/LumiosTypewriter-New.woff") format("woff"),
-		url("../src/fonts/LumiosTypewriter-New.woff2") format("woff2"),
-		url("../src/fonts/LumiosTypewriter-New.ttf") format("truetype");
+	font-family: 'Lumios Typewriter New';
+	src:
+	url('../src/fonts/LumiosTypewriter-New.woff') format('woff'),
+	url('../src/fonts/LumiosTypewriter-New.woff2') format('woff2'),
+	url('../src/fonts/LumiosTypewriter-New.ttf') format('truetype'),
+	url('../src/fonts/LumiosTypewriter-New.eot') format('embedded-opentype');
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 
 // CSS RESET
 * {
@@ -73,7 +74,7 @@ li {
 }
 
 // FONT VARIABLES
-$primary-font: "Lumios Typewriter New", "Special Elite", serif;
+$primary-font: "Lumios Typewriter New", serif;
 $secondary-font: "Montserrat", sans-serif;
 
 // COLOR VARIABLES
@@ -89,9 +90,6 @@ $for-phone-portrait-up: 480px;
 $for-tablet-portrait-up: 640px;
 $for-tablet-landscape-up: 900px;
 $for-desktop-up: 1200px;
-
-@media (min-width: $for-desktop-up) {
-}
 
 // MIXINS
 // SECTIONS
