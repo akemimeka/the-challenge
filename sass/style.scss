@@ -90,10 +90,6 @@ $for-tablet-portrait-up: 640px;
 $for-tablet-landscape-up: 900px;
 $for-desktop-up: 1200px;
 
-@media (min-width: $for-tablet-landscape-up) {
-
-}
-
 @media (min-width: $for-desktop-up) {
 
 }
@@ -125,8 +121,11 @@ $for-desktop-up: 1200px;
 
 	@media (min-width: $for-tablet-portrait-up) {
 		font-size: 2rem;
-		line-height: 2.3rem;
 	}
+
+	@media (min-width: $for-tablet-landscape-up) {
+		margin-bottom: 1.6rem;
+	}	
 }
 
 @mixin section-text-base {
@@ -143,6 +142,11 @@ $for-desktop-up: 1200px;
 
 	@media (min-width: $for-tablet-landscape-up) {
 		font-size: 0.9rem;
+	}
+
+	@media (min-width: $for-tablet-landscape-up) {
+		margin-bottom: 0rem;
+		line-height: 1.7rem;
 	}
 }
 
@@ -334,10 +338,6 @@ section.reserve-1 {
 		color: $medium-gray;
 	}
 
-	.text-container p:last-child {
-		margin-bottom: 0;
-	}
-
 	.section-text {
 		@include section-text-base;
 		color: $white;
@@ -376,10 +376,6 @@ section.about {
 	.section-title {
 		@include section-title-base;
 		color: $dark-gray;
-	}
-
-	.text-container p:last-child {
-		margin-bottom: 0;
 	}
 
 	.section-text {
@@ -491,6 +487,10 @@ section.mission {
 	@include section-base;
 	background-color: $white;
 
+	@media (min-width: $for-tablet-landscape-up) {
+		padding: 4em; 
+	}
+
 	.section-title {
 		@include section-title-base;
 		color: $dark-gray;
@@ -523,6 +523,10 @@ section.faq {
 	.section-text {
 		@include section-text-base;
 		color: $white;
+
+		@media (min-width: $for-tablet-landscape-up) {
+			margin-bottom: 1.4rem;
+		}
 	}
 
 	.text-container li:last-child {
@@ -541,7 +545,9 @@ section.faq {
 		}
 
 		@media (min-width: $for-tablet-portrait-up) {
-			font-weight: bold;
+			margin-right: 1.6rem;
+			padding: 0.2rem 0.6rem;
+			font-size: 1.1rem;
 		}
 	}
 
@@ -563,10 +569,6 @@ section.reserve-2 {
 	.section-text {
 		@include section-text-base;
 		color: $dark-gray;
-	}
-
-	.text-container p:last-child {
-		margin-bottom: 0;
 	}
 
 	form {
@@ -597,7 +599,11 @@ section.reserve-2 {
 	}
 
 	@media (min-width: $for-tablet-portrait-up) {
-		padding: 2rem 1.1rem 1.7rem 1.1rem;
+		padding: 2rem 2rem 1.7rem 2rem;
+	}
+
+	@media (min-width: $for-tablet-landscape-up) {
+		padding: 2rem 3rem 1.7rem 3rem;
 	}
 
 	.footer-text {
@@ -611,8 +617,8 @@ section.reserve-2 {
 			font-size: 0.65rem;
 		}
 
-		@media (min-width: $for-tablet-portrait-up) {
-			margin-bottom: 0.5rem;
+		@media (min-width: $for-tablet-landscape-up) {
+			line-height: 1rem;
 		}
 
 		br {
