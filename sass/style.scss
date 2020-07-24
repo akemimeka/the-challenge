@@ -91,7 +91,6 @@ $for-tablet-landscape-up: 900px;
 $for-desktop-up: 1200px;
 
 @media (min-width: $for-desktop-up) {
-
 }
 
 // MIXINS
@@ -105,6 +104,10 @@ $for-desktop-up: 1200px;
 
 	@media (min-width: $for-tablet-portrait-up) {
 		padding: 2.6rem 4rem;
+	}
+
+	@media (min-width: $for-desktop-up) {
+		padding: 3.5rem 7.5rem;
 	}
 }
 
@@ -125,7 +128,11 @@ $for-desktop-up: 1200px;
 
 	@media (min-width: $for-tablet-landscape-up) {
 		margin-bottom: 1.6rem;
-	}	
+	}
+
+	@media (min-width: $for-desktop-up) {
+		font-size: 2.1rem;
+	}
 }
 
 @mixin section-text-base {
@@ -169,6 +176,10 @@ $for-desktop-up: 1200px;
 	@media (min-width: $for-tablet-landscape-up) {
 		max-width: 45%;
 	}
+
+	@media (min-width: $for-desktop-up) {
+		max-width: 35%;
+	}
 }
 
 @mixin button {
@@ -210,6 +221,10 @@ html {
 	@media (min-width: $for-tablet-landscape-up) {
 		font-size: 20px;
 	}
+
+	@media (min-width: $for-desktop-up) {
+		font-size: 21.5px;
+	}
 }
 
 body {
@@ -235,6 +250,10 @@ body {
 
 	@media (min-width: $for-tablet-landscape-up) {
 		padding: 2.6rem 3.8rem;
+	}
+
+	@media (min-width: $for-desktop-up) {
+		padding: 2.6rem 5rem;
 	}
 }
 
@@ -277,6 +296,10 @@ body {
 	@media (min-width: $for-tablet-landscape-up) {
 		max-width: 37%;
 	}
+
+	@media (min-width: $for-desktop-up) {
+		max-width: 30%;
+	}
 }
 
 .nav-link {
@@ -294,8 +317,9 @@ body {
 	}
 
 	@media (min-width: $for-tablet-portrait-up) {
-		border: 0;
+		margin-left: 1.5rem;
 		padding: 0.2rem 0 0 0;
+		border: 0;
 		background-color: $white;
 		font-size: 0.9rem;
 	}
@@ -365,12 +389,18 @@ section.reserve-1 {
 }
 
 // ABOUT SECTION
-section.about {
+// MISSION SECTION
+section.about,
+section.mission {
 	@include section-base;
 	background-color: $white;
 
 	@media (min-width: $for-tablet-landscape-up) {
-		padding: 4em; 
+		padding: 4em;
+	}
+
+	@media (min-width: $for-desktop-up) {
+		padding: 5rem 8.5rem;
 	}
 
 	.section-title {
@@ -399,6 +429,10 @@ section.judges {
 		justify-content: space-around;
 		align-items: start;
 		padding: 4rem;
+	}
+	
+	@media (min-width: $for-desktop-up) {
+		padding: 4rem 1.5rem;
 	}
 
 	.section-title {
@@ -445,8 +479,15 @@ section.judges {
 			}
 
 			@media (min-width: $for-tablet-landscape-up) {
+				width: 100%;
 				max-width: 220px;
 				margin: 0 0.5rem;
+			}
+
+			@media (min-width: $for-desktop-up) {
+				width: 100%;
+				max-width: 350px;
+				flex-wrap: nowrap;
 			}
 		}
 
@@ -476,35 +517,20 @@ section.judges {
 			}
 
 			@media (min-width: $for-tablet-landscape-up) {
+				width: 100%;
 				max-width: 220px;
+			}
+
+			@media (min-width: $for-desktop-up) {
+				width: 100%;
+				max-width: 350px;
 			}
 		}
 	}
 }
 
 // OUR MISSION SECTION
-section.mission {
-	@include section-base;
-	background-color: $white;
-
-	@media (min-width: $for-tablet-landscape-up) {
-		padding: 4em; 
-	}
-
-	.section-title {
-		@include section-title-base;
-		color: $dark-gray;
-	}
-
-	.text-container p:last-child {
-		margin-bottom: 0;
-	}
-
-	.section-text {
-		@include section-text-base;
-		color: $dark-gray;
-	}
-}
+// Stylized with the ABOUT section above
 
 // FAQ SECTION
 section.faq {
@@ -512,7 +538,7 @@ section.faq {
 	background-color: $dark-gray;
 
 	@media (min-width: $for-tablet-landscape-up) {
-		padding: 4em; 
+		padding: 4em;
 	}
 
 	.section-title {
