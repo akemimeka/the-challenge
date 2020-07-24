@@ -192,7 +192,6 @@ $for-desktop-up: 1200px;
 
 @mixin to-white-bg-red-txt-hover {
 	background-color: $white;
-	font-weight: bold;
 	color: $red;
 }
 
@@ -360,6 +359,7 @@ section.reserve-1 {
 
 		button:hover {
 			@include to-white-bg-red-txt-hover;
+			font-weight: bold;
 		}
 	}
 }
@@ -585,6 +585,12 @@ section.reserve-2 {
 
 		button {
 			@include button;
+		}
+
+		button:hover {
+			@include to-white-bg-red-txt-hover;
+			background-color: $medium-gray;
+			font-weight: bold;
 		}
 	}
 }
