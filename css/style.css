@@ -5,7 +5,6 @@
 }
 * {
   box-sizing: border-box;
-  transition: 0.3s;
 }
 
 html,
@@ -152,6 +151,7 @@ body {
   color: #363d47;
   border: 2px solid #363d47;
   border-radius: 6px;
+  transition: 0.5s;
 }
 @media (min-width: 640px) {
   .nav-icon-container .nav-menu-icon {
@@ -227,6 +227,7 @@ body {
 .nav-link:hover {
   color: #a61717;
   background-color: #9a9da2;
+  transition: 0.5s;
 }
 @media (min-width: 640px) {
   .nav-link:hover {
@@ -361,6 +362,7 @@ section.reserve-1 form button {
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
   color: #fff;
+  transition: 0.5s;
 }
 @media (min-width: 640px) {
   section.reserve-1 form button {
@@ -724,6 +726,7 @@ section.faq button.faq-list-style {
   background-color: #a61717;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+  transition: 0.5s;
 }
 @media (min-width: 480px) {
   section.faq button.faq-list-style {
@@ -854,6 +857,7 @@ section.reserve-2 form button {
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
   color: #fff;
+  transition: 0.5s;
 }
 @media (min-width: 640px) {
   section.reserve-2 form button {
@@ -950,6 +954,7 @@ section.reserve-2 form button:hover {
 }
 .footer .icons-container a i.fa {
   color: #fff;
+  transition: 0.5s;
 }
 .footer .icons-container a i.fa:hover {
   color: #a61717;

@@ -13,7 +13,6 @@
 // CSS RESET
 * {
 	box-sizing: border-box;
-	transition: 0.3s;
 }
 
 html,
@@ -187,6 +186,7 @@ $for-desktop-up: 1200px;
 	font-size: 0.9rem;
 	letter-spacing: 0.1rem;
 	color: $white;
+	transition: 0.5s;
 
 	@media (min-width: $for-tablet-portrait-up) {
 		padding: 0.5rem 1.1rem;
@@ -287,6 +287,7 @@ body {
 		color: $dark-gray;
 		border: 2px solid $dark-gray;
 		border-radius: 6px;
+		transition: 0.5s;
 
 		@media (min-width: $for-tablet-portrait-up) {
 			display: none;
@@ -294,7 +295,7 @@ body {
 	}
 
 	.nav-menu-icon:hover {
-		color: $red;
+		@include to-red-hover;
 		border-color: $red;
 	}
 }
@@ -357,6 +358,7 @@ body {
 .nav-link:hover {
 	@include to-red-hover;
 	background-color: $medium-gray;
+	transition: 0.5s;
 
 	@media (min-width: $for-tablet-portrait-up) {
 		background-color: $white;
@@ -590,6 +592,7 @@ section.faq {
 		background-color: $red;
 		font-family: $secondary-font;
 		color: $white;
+		transition: 0.5s;
 
 		@media (min-width: $for-phone-portrait-up) {
 			font-size: 1rem;
@@ -702,6 +705,7 @@ section.reserve-2 {
 
 			i.fa {
 				color: $white;
+				transition: 0.5s;
 			}
 
 			i.fa:hover {
