@@ -237,6 +237,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	padding: 1.3rem 1rem 1rem 1rem;
 	font-family: $primary-font;
 	background-color: $white;
 
@@ -255,27 +256,47 @@ body {
 	}
 }
 
-.nav-title {
-	padding-top: 1.7rem;
-	padding-bottom: 1.1rem;
-	letter-spacing: 0.08rem;
-	text-align: center;
+.nav-icon-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: baseline;
+	justify-content: space-around;
 
-	@media (min-width: $for-phone-portrait-up) {
-		padding-top: 1.9rem;
-		padding-bottom: 1.3rem;
+	.nav-title {
+		padding-bottom: 0.8rem;
+		font-size: 1.5rem;
+		letter-spacing: 0.06rem;
+		text-align: center;
+		
+		@media (min-width: $for-tablet-portrait-up) {
+			display: block;
+			padding: 0;
+			text-align: left;
+			font-size: 1.2rem;
+		}
+	}
+	
+	.nav-title a {
+		color: $red;
+	}
+	
+	.nav-menu-icon {
+		padding: 0.2rem 0.4rem;
+		font-size: 1.5em;
+		color: $dark-gray;
+		border: 2px solid $dark-gray;
+		border-radius: 6px;
+
+		@media (min-width: $for-tablet-portrait-up) {
+			display: none;
+		}
 	}
 
-	@media (min-width: $for-tablet-portrait-up) {
-		display: block;
-		padding: 0;
-		text-align: left;
-		font-size: 1.2rem;
+	.nav-menu-icon:hover {
+		color: $red;
+		border-color: $red;
 	}
-}
-
-.nav-title a {
-	color: $red;
 }
 
 .nav-link-container {
@@ -297,6 +318,14 @@ body {
 
 	@media (min-width: $for-desktop-up) {
 		max-width: 30%;
+	}
+}
+
+.hidden-nav-links {
+	display: none;
+
+	@media (min-width: $for-tablet-portrait-up) {
+		display: flex;
 	}
 }
 
@@ -337,11 +366,11 @@ body {
 // RESERVE-1 SECTION
 section.reserve-1 {
 	@include section-base;
-	margin-top: 11rem;
+	margin-top: 5.1rem;
 	background-color: $dark-gray;
 
 	@media (min-width: $for-phone-portrait-up) {
-		margin-top: 12.1rem;
+		margin-top: 5rem;
 	}
 
 	@media (min-width: $for-tablet-portrait-up) {

@@ -100,6 +100,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 1.3rem 1rem 1rem 1rem;
   font-family: "Lumios Typewriter New", Courier, monospace;
   background-color: #fff;
 }
@@ -121,29 +122,45 @@ body {
   }
 }
 
-.nav-title {
-  padding-top: 1.7rem;
-  padding-bottom: 1.1rem;
-  letter-spacing: 0.08rem;
+.nav-icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-around;
+}
+.nav-icon-container .nav-title {
+  padding-bottom: 0.8rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.06rem;
   text-align: center;
 }
-@media (min-width: 480px) {
-  .nav-title {
-    padding-top: 1.9rem;
-    padding-bottom: 1.3rem;
-  }
-}
 @media (min-width: 640px) {
-  .nav-title {
+  .nav-icon-container .nav-title {
     display: block;
     padding: 0;
     text-align: left;
     font-size: 1.2rem;
   }
 }
-
-.nav-title a {
+.nav-icon-container .nav-title a {
   color: #a61717;
+}
+.nav-icon-container .nav-menu-icon {
+  padding: 0.2rem 0.4rem;
+  font-size: 1.5em;
+  color: #363d47;
+  border: 2px solid #363d47;
+  border-radius: 6px;
+}
+@media (min-width: 640px) {
+  .nav-icon-container .nav-menu-icon {
+    display: none;
+  }
+}
+.nav-icon-container .nav-menu-icon:hover {
+  color: #a61717;
+  border-color: #a61717;
 }
 
 .nav-link-container {
@@ -168,6 +185,15 @@ body {
 @media (min-width: 1200px) {
   .nav-link-container {
     max-width: 30%;
+  }
+}
+
+.hidden-nav-links {
+  display: none;
+}
+@media (min-width: 640px) {
+  .hidden-nav-links {
+    display: flex;
   }
 }
 
@@ -210,7 +236,7 @@ body {
 
 section.reserve-1 {
   padding: 2rem 1.1rem;
-  margin-top: 11rem;
+  margin-top: 5.1rem;
   background-color: #363d47;
 }
 @media (min-width: 480px) {
@@ -230,7 +256,7 @@ section.reserve-1 {
 }
 @media (min-width: 480px) {
   section.reserve-1 {
-    margin-top: 12.1rem;
+    margin-top: 5rem;
   }
 }
 @media (min-width: 640px) {
