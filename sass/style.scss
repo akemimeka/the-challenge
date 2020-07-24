@@ -285,7 +285,7 @@ body {
 
 	@media (min-width: $for-tablet-portrait-up) {
 		width: 100%;
-		max-width: 47%;
+		max-width: 50%;
 		flex-direction: row;
 		justify-content: space-between;
 		text-align: right;
@@ -315,7 +315,7 @@ body {
 	}
 
 	@media (min-width: $for-tablet-portrait-up) {
-		margin-left: 1.5rem;
+		margin-left: 1.2rem;
 		padding: 0.2rem 0 0 0;
 		border: 0;
 		background-color: $white;
